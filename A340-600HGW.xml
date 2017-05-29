@@ -149,7 +149,7 @@ The A340-600HGW (High Gross Weight) version first flew on 18 November 2005 and w
 <!-- Engines -->
 
 <jet x="2.16" y="19.89"  z="-1.995" mass="10660" thrust="60000" spool-time="3"
-egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[0]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
@@ -160,7 +160,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 
 
 <jet x="8.16" y="9.89"  z="-2.995" mass="10660" thrust="60000" spool-time="3"
-egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[1]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
@@ -170,7 +170,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 </jet>
 
 <jet x="8.16" y="-9.89"  z="-2.995" mass="10660" thrust="60000"  spool-time="3"
-egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[2]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[2]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST"/>
@@ -181,7 +181,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 
 
 <jet x="2.16" y="-19.89"  z="-1.995" mass="10660" thrust="60000"  spool-time="3"
-egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[3]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[3]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[3]/reverser" control="REVERSE_THRUST"/>
@@ -207,7 +207,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-2.39" y="5.6" z="-5.7" compression="0.8" spring="1.0" >
+<gear x="-2.39" y="5.6" z="-5.7" compression="0.8" spring="0.6" >
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -215,7 +215,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-2.39" y="-5.6" z="-5.7" compression="0.8" spring="1.0">
+<gear x="-2.39" y="-5.6" z="-5.7" compression="0.8" spring="0.6">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -223,15 +223,9 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-3.8" y="0" z="-6.22" compression="3.0" spring="1.2" >
+<gear x="-3.8" y="0" z="-5.6" compression="3.0" spring="0.6" >
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
-  <control-speed control="EXTEND" transition-time="7"/>
-</gear>
-
-<gear x="-3.8" y="0" z="-6.22" compression="3.0" spring="1.2">
-  <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-  <control-output control="EXTEND" prop="/gear/gear[4]/position-norm"/>
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 

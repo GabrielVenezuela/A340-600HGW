@@ -2025,10 +2025,10 @@ Liam Gathercole, Andino
 	<type>rotate</type>
 		<object-name>rhaxle</object-name>
 		<property>sim/multiplay/generic/float[2]</property>
-		<factor>100</factor>
-		<min-deg>-18</min-deg>
+		<factor>200</factor>
+		<min-deg>-35</min-deg>
       	<max-deg>0</max-deg>
-		<offset-deg>-18</offset-deg>
+		<offset-deg>-35</offset-deg>
 		<center>
             <x-m>-1.0322865</x-m>
             <y-m>0</y-m>
@@ -2072,10 +2072,10 @@ Liam Gathercole, Andino
 	<type>rotate</type>
 		<object-name>lhaxle</object-name>
 		<property>sim/multiplay/generic/float[1]</property>
-		<factor>100</factor>
-		<min-deg>-18</min-deg>
+		<factor>200</factor>
+		<min-deg>-35</min-deg>
       	<max-deg>0</max-deg>
-		<offset-deg>-18</offset-deg>
+		<offset-deg>-35</offset-deg>
 		<center>
             <x-m>-1.0322865</x-m>
             <y-m>0</y-m>
@@ -2119,10 +2119,10 @@ Liam Gathercole, Andino
 	<type>rotate</type>
 		<object-name>mhaxle</object-name>
 		<property>sim/multiplay/generic/float[3]</property>
-		<factor>100</factor>
-		<min-deg>-12</min-deg>
+		<factor>170</factor>
+		<min-deg>-25</min-deg>
       	<max-deg>0</max-deg>
-		<offset-deg>-12</offset-deg>
+		<offset-deg>-25</offset-deg>
 		<center>
             <x-m>-1.0322865</x-m>
             <y-m>0</y-m>

@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <PropertyList>
 
-
     <flipflop>
         <name>Auto Speedbrake Engage logic</name>
         <debug>false</debug>
@@ -52,8 +51,6 @@
                     </less-than>
                     <property>/gear/gear[1]/wow</property>
                     <property>/gear/gear[2]/wow</property>
-                    <property>/gear/gear[3]/wow</property>
-                    <property>/gear/gear[4]/wow</property>
                     <greater-than>
                         <property>/velocities/groundspeed-kt</property>
                         <value>60</value>
@@ -80,8 +77,9 @@
                     </greater-than>
 				</or>
         </R>
-        <output>/controls/flight/spoilers</output>	
+        <output>/controls/flight/speedbrake</output>	
     </flipflop>
+
 
 
     <!-- flap protection -->

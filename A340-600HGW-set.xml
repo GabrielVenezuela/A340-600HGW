@@ -67,6 +67,52 @@
 
 
     </sim>
+	
+<it-autoflight>
+	<config>
+		<altitude-dial-mode>0</altitude-dial-mode>
+		<roll>
+			<umin>-0.50</umin>
+			<umax>0.50</umax>
+			<kp>0.05</kp>
+			<kp-vloc>0.09</kp-vloc>
+			<ti>10.0</ti>
+			<td>0.00001</td>
+			<kp-cws>0.05</kp-cws>
+		</roll>
+		<pitch>
+			<umin>-0.40</umin>
+			<umax>0.40</umax>
+			<kp>-0.09</kp>
+			<ti>10.0</ti>
+			<td>0.0001</td>
+			<kp-cws>-0.05</kp-cws>
+		</pitch>
+		<cmd>
+			<roll-kp>-1.9</roll-kp>
+			<roll-scale>1.5</roll-scale>
+			<vorloc>-4.0</vorloc>
+			<vs>0.01</vs>
+			<fpa>0.30</fpa>
+		</cmd>
+		<autoland>
+			<kp-pitch>0.02</kp-pitch>
+			<kp-rudder>-0.2</kp-rudder>
+		</autoland>
+	</config>
+	<settings>
+		<default-bank-limit>30</default-bank-limit> <!-- Set the Default Bank Limit -->
+		<enable-cws>0</enable-cws> <!-- Enable/Disable CWS -->
+		<land-enable>1</land-enable> <!-- Enable/Disable Autoland -->
+		<land-flap>0.620</land-flap> <!-- Minimum Flap used for Landing -->
+		<retard-ft>20</retard-ft> <!-- Enable Thrust Retard -->
+		<retard-enable>0</retard-enable> <!-- AGL to Thrust Retard -->
+		<togaspd>165</togaspd> <!-- V2 + 10kts -->
+		<lat-agl-ft>200</lat-agl-ft> <!-- Set to 999999 if you do not want T/O to change automatically to HDG, or LNAV -->
+		<reduc-agl-ft>1500</reduc-agl-ft> <!-- Set to 999999 if you do not want TOGA to change automatically to FLCH -->
+		<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
+	</settings>
+</it-autoflight>
 
     <!--consumables n="0">
         <fuel n="0">
@@ -120,9 +166,9 @@
             <internal archive="y">true</internal>
             <config>
                 <x-offset-m type="double">-0.50</x-offset-m>
-                <y-offset-m type="double">0.25</y-offset-m>
+                <y-offset-m type="double">0.14</y-offset-m>
                 <z-offset-m type="double">-34.60</z-offset-m>
-                <pitch-offset-deg>-13.5</pitch-offset-deg>
+                <pitch-offset-deg>-8</pitch-offset-deg>
                 <limits>
                     <enabled type="bool">true</enabled> 
                 </limits>
@@ -130,23 +176,6 @@
         </view>
 
 	  <view n="100">
-	    <name>Wing View</name>
-	    <type>lookfrom</type>
-	    <internal archive="y">false</internal>
-	    <config>
-	      <from-model type="bool">true</from-model>
-	      <from-model-idx type="int">0</from-model-idx>
-	      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-	      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
-	      <pitch-offset-deg>-8.0</pitch-offset-deg>
-	      <heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
-	      <x-offset-m archive="y"> -3.50 </x-offset-m> <!--Left/Right-->
-	      <y-offset-m archive="y"> 1.27 </y-offset-m> <!--Up/Down-->
-	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
-	    </config>
-	  </view>
-
-	  <view n="101">
 	   <name>Jump seat</name>
 	   <type>lookfrom</type>
 	   <internal type="bool">true</internal>
@@ -165,7 +194,7 @@
 	   </dynamic>
 	  </view>
 
-	  <view n="102">
+	  <view n="101">
 	   <name>Tail view</name>
 	   <type>lookfrom</type>
 	   <internal type="bool">false</internal>
@@ -184,7 +213,7 @@
 	   </dynamic>
 	  </view>
 
-	  <view n="103">
+	  <view n="102">
 	   <name>Economy class view</name>
         <type>lookfrom</type>
         <internal archive="y">true</internal>
@@ -196,7 +225,7 @@
         </config>
 	  </view>
 
-	<view n="104">
+	<view n="103">
 	   <name>Gear view</name>
 	   <type>lookfrom</type>
 	   <internal type="bool">false</internal>
@@ -216,7 +245,7 @@
 	  </view>
 
 
-	<view n="105">
+	<view n="104">
            <name>Copilot seat</name>
 	   <type>lookfrom</type>
 	   <internal type="bool">true</internal>
@@ -225,7 +254,7 @@
 	    <from-model-idx type="int">0</from-model-idx>
 	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
 		        <x-offset-m type="double">0.45</x-offset-m>
-		        <y-offset-m type="double">0.28</y-offset-m>
+		        <y-offset-m type="double">0.14</y-offset-m>
 		        <z-offset-m type="double">-34.54</z-offset-m>
 
 
@@ -233,7 +262,7 @@
 
 
 
-	    <pitch-offset-deg>-10</pitch-offset-deg>
+	    <pitch-offset-deg>-8</pitch-offset-deg>
 	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
 	   </config>
 	   <dynamic>
@@ -241,8 +270,39 @@
 	   </dynamic>
 	  </view>
 
-
-
+     <view n="105">
+	    <name>Wing Left</name>
+	    <type>lookfrom</type>
+	    <internal archive="y">false</internal>
+	    <config>
+	      <from-model type="bool">true</from-model>
+	      <from-model-idx type="int">0</from-model-idx>
+	      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+	      <default-field-of-view-deg type="double">118</default-field-of-view-deg>
+	      <pitch-offset-deg>-8.0</pitch-offset-deg>
+	      <heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
+	      <x-offset-m archive="y"> -3.50 </x-offset-m> <!--Left/Right-->
+	      <y-offset-m archive="y"> 1.27 </y-offset-m> <!--Up/Down-->
+	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
+	    </config>
+	  </view>
+	  
+	  <view n="106">
+	    <name>Wing Right</name>
+	    <type>lookfrom</type>
+	    <internal archive="y">false</internal>
+	    <config>
+	      <from-model type="bool">true</from-model>
+	      <from-model-idx type="int">0</from-model-idx>
+	      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+	      <default-field-of-view-deg type="double">118</default-field-of-view-deg>
+	      <pitch-offset-deg>-8.0</pitch-offset-deg>
+	      <heading-offset-deg type="double">270</heading-offset-deg> <!-- parallel to the panel -->
+	      <x-offset-m archive="y"> 3.50 </x-offset-m> <!--Left/Right-->
+	      <y-offset-m archive="y"> 1.27 </y-offset-m> <!--Up/Down-->
+	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
+	    </config>
+	  </view>
 
 
 <help>
@@ -450,7 +510,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <float n="1" alias="/gear/gear[1]/compression-m"/>
                 <float n="2" alias="/gear/gear[2]/compression-m"/>
                 <float n="3" alias="/gear/gear[3]/compression-m"/>
-                <float n="4" alias="/gear/gear[4]/compression-m"/>
+                <!--float n="4" alias="not used"/-->
                 <float n="5" alias="/surface-positions/speedbrake-norm"/>
                 <float n="6" alias="/surface-positions/reverser-norm"/>
 				<float n="7" alias="/gear/gear[0]/rollspeed-ms"/>
@@ -507,6 +567,10 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <name>Autobrake system</name>
                 <path>Aircraft/A340-600HGW/Systems/A340-autobrake.xml</path>
             </autopilot>
+            <autopilot>
+                <name>Custom engine values system</name>
+                <path>Aircraft/A340-600HGW/Systems/engine-timing.xml</path>
+            </autopilot>
 
             <!--  slow running property-rules (running at frame rate) -->
             <property-rule n="100">
@@ -544,6 +608,21 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         <virtual-cockpit>true</virtual-cockpit>
         <allow-toggle-cockpit>true</allow-toggle-cockpit>
     </sim>
+	
+	<modes>
+		<altimeter>
+			<inhg>0</inhg>
+		</altimeter>
+		<pfd>
+			<minimums-mode>DH</minimums-mode>
+			<ILS1>0</ILS1>
+			<ILS2>0</ILS2>
+			<stallvls>-10</stallvls>
+			<fma>
+				<athr-box>O  </athr-box>
+			</fma>
+		</pfd>
+	</modes>
 
     <engines n="0">
         <engine n="0">
@@ -727,7 +806,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 </category-13>
             </configuration-module>
             <voice>
-                <file-prefix type="string">Aircraft/A340-600HGW/Sounds/mk-viii/</file-prefix>
+                <file-prefix type="string">Aircraft/A340-600HGW/Sounds/GPWS/</file-prefix>
             </voice>
             <inputs>                            <!-- Module I/O -->
                 <arinc429>
@@ -747,7 +826,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <speaker>                           <!-- Speaker Configuration -->
                 <max-dist type="double"> 200.0 </max-dist>        <!-- Max. distance where speaker is heard -->
                 <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
-                <volume type="double"> 0.6 </volume>          <!-- Volume at reference distance -->
+                <volume type="double"> 2 </volume>          <!-- Volume at reference distance -->
             </speaker>
         </mk-viii>
         <tcas>
@@ -766,11 +845,11 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         </tcas>
         <efis>
             <inputs>
-                <tfc  type="bool">true</tfc>
-                <sta  type="bool">true</sta>
-                <arpt type="bool">true</arpt>
-                <wpt  type="bool">true</wpt>
-                <wxr  type="bool">true</wxr>
+                <tfc  type="bool">false</tfc>
+                <sta  type="bool">false</sta>
+                <arpt type="bool">false</arpt>
+                <wpt  type="bool">false</wpt>
+                <wxr  type="bool">false</wxr>
                 <range type="int">10</range>
             </inputs>
             <eicas>
@@ -865,7 +944,9 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <maingear-steering-cmd-norm type="double">0</maingear-steering-cmd-norm>
         </gear>
         <flight>
-            <speedbrake-lever type="int">0</speedbrake-lever>
+			<speedbrake-arm>0</speedbrake-arm>
+			<ground-spoilers-armed type="bool">0</ground-spoilers-armed>
+			<speedbrake-lever type="double">0</speedbrake-lever>
         </flight>
         <engines>
             <autostart-button type="bool">0</autostart-button>
@@ -917,11 +998,10 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <file>Aircraft/A340-600HGW/Nasal/ground_steering.nas</file>
 			<file>Aircraft/A340-600HGW/Nasal/ground-services.nas</file>
 			<file>Aircraft/A340-600HGW/Nasal/fuel-dump.nas</file>
-			<!--file>Aircraft/A340-600HGW/Nasal/terrainmap.nas</file-->
-			<!--file>Aircraft/A340-600HGW/Nasal/terrain-map.nas</file-->
             <file>Aircraft/Generic/limits.nas</file>
 			<file>Aircraft/A340-600HGW/Models/Instruments/ND/ND.nas</file>
 			<file>Aircraft/A340-600HGW/Nasal/efis.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/PFD_FMA.nas</file>
         </a340>
 		<itaf>
 			<file>Aircraft/A340-600HGW/Nasal/it-autoflight.nas</file>
@@ -932,9 +1012,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		<thrust>
 			<file>Aircraft/A340-600HGW/Nasal/thrust.nas</file>
 		</thrust>
-        <!--cdu>
-            <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
-        </cdu-->
     </nasal>
 
     <limits n="0">
